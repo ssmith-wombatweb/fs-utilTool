@@ -1,0 +1,27 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": 0,
+    "new-cap": 0,
+    "prefer-template": 0,
+    "global-require": 0,
+    "no-unused-expressions": 0,
+    "no-param-reassign": 0,
+    "no-unused-vars": 0,
+    "no-global-assign": 0,
+    "no-unsafe-negation": 0,
+    "no-shadow": 0
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "before": true,
+    "beforeEach": true
+  }
+}
