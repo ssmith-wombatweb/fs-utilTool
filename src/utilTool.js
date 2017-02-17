@@ -4,13 +4,16 @@ exports.debug = (title, obj) => {
 
   const border = '\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n';
   const time = new Date();
-  colors.setTheme({});
+  colors.setTheme({
+    create: 'green',
+    read: 'yellow',
+    update: 'magenta',
+    delete: 'red',
+    error: 'red',
+  });
   const output = border + title + JSON.stringify(obj) + '\n' + time + border;
 
   if (process.env.DEBUG) {
-    fs.appendFile('lib/logs/eLog.log', output, 'utf8', (err) => {
-      if (err) throw err;
-    });
     console.log(output);
   }
 };
