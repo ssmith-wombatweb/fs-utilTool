@@ -1,5 +1,5 @@
 {
-  "name": "fs-utilTool",
+  "name": "utiltool",
   "version": "1.0.1",
   "description": "Utility Tool",
   "main": "src/utilTool.js",
