@@ -1,4 +1,4 @@
 # Install
 ```
-npm install fs-utilTool
+npm install utiltool
 ```
