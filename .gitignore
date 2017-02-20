@@ -6,3 +6,5 @@ env.json
 node_modules
 out
 build
+test.js
+.vscode
