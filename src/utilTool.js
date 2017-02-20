@@ -35,6 +35,7 @@ exports.debug = (title, obj) => {
   if (process.env.DEBUG) { // If debug is set.
     switch (level) { // If the level is...
       case 'error': // Error, output to the error console.
+      case 'delete': // Delete, output to the error console.
         console.error(output);
         break;
       default: // Otherwise output to the regular console.
