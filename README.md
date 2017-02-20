@@ -49,4 +49,4 @@ This will return `1.2.4`. It increments the patch version.
 An invalid version number will return `Invalid version number.` and an invalid release type will return `Invalid release type.`.
 
 ## Unit Testing
-Run `mocha` in the root directory to run the unit test.
+Run `mocha` in the root directory to run the unit test. To test coverage run `istanbul cover _mocha`.
