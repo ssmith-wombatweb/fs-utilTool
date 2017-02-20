@@ -8,3 +8,4 @@ out
 build
 test.js
 .vscode
+coverage
