@@ -69,7 +69,7 @@ describe('Util Tool DEBUG', () => {
   });
   const version = util.updateVersion;
 
-  describe('TynyVersion Utility Test', () => {
+  describe('Version Utility Test', () => {
     describe('Test Version Change Function', () => {
       it('Update the major version.', () => {
         const newVer = version('1.3.2', 'major');
