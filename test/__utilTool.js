@@ -18,6 +18,7 @@ describe('Util Tool DEBUG', () => {
     it('Output messages.', () => {
       util.debug('test'.update, { test: 'object' });
       util.debug('test'.error, { test: 'object' });
+      util.debug('test'.delete, { test: 'object' });
     });
   });
   describe('Check Message Output', () => {
