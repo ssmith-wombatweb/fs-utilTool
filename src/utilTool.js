@@ -5,9 +5,9 @@ exports.debug = (title, obj) => {
   const time = new Date(); // Current Date.
   const theme = { // Color themes.
     create: 'green',
-    read: 'yellow',
+    read: 'blue',
     update: 'magenta',
-    delete: 'red',
+    delete: 'yellow',
     error: 'red',
   };
   colors.setTheme(theme); // Setup color themes.
@@ -35,8 +35,10 @@ exports.debug = (title, obj) => {
   if (process.env.DEBUG) { // If debug is set.
     switch (level) { // If the level is...
       case 'error': // Error, output to the error console.
-      case 'delete': // Delete, output to the error console.
         console.error(output);
+        break;
+      case 'delete': // Delete, output to the warn console.
+        console.warn(output);
         break;
       default: // Otherwise output to the regular console.
         console.log(output);
