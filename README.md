@@ -30,8 +30,11 @@ Sun Feb 19 2017 15:27:09 GMT-0500 (EST)
 #### Log Messages
 The create, read and update messages will output to the standard log.
 
+### Warn Messages
+The delete message will output to the standard warn log.
+
 #### Error Messages
-The delete and error messages will output to the standard error log.
+The error message will output to the standard error log.
 
 ## Using the Version Increaser
 ### `.updateVersion(current, release)`
