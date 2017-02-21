@@ -25,23 +25,34 @@ describe('Util Tool DEBUG', () => {
       this.console = {
         log: sinon.spy(),
         error: sinon.spy(),
+        warn: sinon.spy(),
       };
 
       util.__set__('console', this.console);
     });
-    it('Output an error and delete message', () => {
+    it('Output an delete message to the warn log.', () => {
       const t = this;
 
-      util.debug('test'.error, { test: 'object' });
       util.debug('test'.delete, { test: 'object' });
 
-      expect(t.console.error.callCount).to.equal(2);
+      expect(t.console.warn.callCount).to.equal(1);
       t.console.log.args.forEach((arg) => {
         expect(arg[0]).to.contain('test');
         expect(arg[0]).to.contain('{"test":"object"}');
       });
     });
-    it('Output create, read, update and delete message', () => {
+    it('Output an error message to the error log.', () => {
+      const t = this;
+
+      util.debug('test'.error, { test: 'object' });
+
+      expect(t.console.error.callCount).to.equal(1);
+      t.console.log.args.forEach((arg) => {
+        expect(arg[0]).to.contain('test');
+        expect(arg[0]).to.contain('{"test":"object"}');
+      });
+    });
+    it('Output create, read, and update to the regular log.', () => {
       const t = this;
 
       util.debug('test'.create, { test: 'object' });
