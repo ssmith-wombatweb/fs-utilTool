@@ -38,7 +38,7 @@ exports.debug = (title, obj) => {
         console.error(output);
         break;
       case 'delete': // Delete, output to the warn console.
-        console.warn(outpu);
+        console.warn(output);
         break;
       default: // Otherwise output to the regular console.
         console.log(output);
